@@ -2,26 +2,28 @@
     @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
     body {
         font-family: 'Varela Round', sans-serif;
-    /* Set the background image */
-    background-image: url('img.jpg');
-    
-    /* Specify background properties */
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the background image */
-    
-    /* Additional styles for the body */
-    margin: 0; /* Remove default margin */
-        padding:0;
-    overflow: hidden;
+        /* Set the background image */
+        background-image: url('img.jpg');
+        
+        /* Specify background properties */
+        background-size: contain; /* Cover the entire viewport */
+        background-position: center center; /* Center the background image */
+        background-repeat: no-repeat; /* Do not repeat the background image */
+        
+        background-attachment: fixed;
+        
+        /* Additional styles for the body */
+        margin: 0; /* Remove default margin */
+        padding: 0;
+        overflow: hidden;
     }
     .animated-text {
         color: white;
-        font-size: 150px;
-        width: 600px;
+        font-size: 15vw;
+        width: max-content;
         position: absolute;
-        left: 43%; /* Center horizontally */
-        transform: translate(-50%, -50%) translateY(-50px); /* Apply manual offset of 10 pixels up */
+        left: 150px;
+        transform: translate(-50%, -50%) translateY(-50px);
         opacity: 0;
         animation: slideIn 3s forwards ease-out;
     }   
@@ -51,20 +53,22 @@
     }
     .box{
         position: absolute;
-        width: 630px;
-        height: 400px;
+        height: max-content;
+        width: max-content;
         bottom: 28%;
-        left: 8%;
+        left: 25px;
         color: white;
         font-size: 60px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         align-content: flex-start;
+        flex-direction: column;
+        top: 60vh;
     }
     .box1{
-        font-size: 75px;
+        font-size: 8vw;
         animation: slideInBox 1s forwards ease-out;
         opacity: 0;
         animation-delay: 5s;
@@ -75,9 +79,9 @@
         animation: slideInBox 1s forwards ease-out;
         animation-delay: 5s;
         position: relative;
-        font-size: 50px;
-        height: 75px;
-        letter-spacing: 5px;
+        font-size: 6vw;
+        height: 55px;
+        letter-spacing: 1px;
         margin-top: 40px;
         background: rgb(94, 93, 240, 0.6);
         border-radius: 999px;
@@ -97,10 +101,11 @@
         width: fit-content;
         word-break: break-word;
         border: 0;
+        margin-top: 13px;
     }
     #video{
-        width: 450px;
-        height: 450px;
+        width: 350px;
+        height: 350px;
         display: none;
         position: absolute;
         box-sizing: border-box;
